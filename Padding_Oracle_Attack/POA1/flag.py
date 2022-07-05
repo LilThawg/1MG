@@ -1,0 +1,1 @@
+FLAG = b'KCSC{Padd1n9_0racle_4ttaCk_S4mple}'
