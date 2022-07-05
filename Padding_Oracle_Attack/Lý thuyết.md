@@ -15,17 +15,17 @@ Trước khi đi sâu vào cách tấn công, ta hãy cùng tìm hiểu mã hoá
 
 ![image](https://lilthawg29.files.wordpress.com/2021/03/image-26.png)
 
-2 hình ảnh trên đã cho ta hình dung 1 ra mode CBC hoạt động như nào, chúng ta sẽ lấy 1 ví dụ cụ thể là AES-128 tức là key: 16 bytes và iv: 16 bytes, mỗi block cũng cho độ dài là 16 bytes luôn. 
+2 hình ảnh trên đã cho ta hình dung 1 ra mode CBC hoạt động như nào, chúng ta sẽ lấy 1 ví dụ cụ thể là AES-128 tức là key: 16 bytes và iv: 16 bytes, mỗi block cũng cho độ dài là 16 bytes luôn.
 
-Nếu độ dài bản rõ không đủ nó sẽ tự động padding thêm sao cho độ dài đầu vào là bội số của 16. Mặc định padding sẽ dùng [PKCS#7](https://en.wikipedia.org/wiki/Padding_(cryptography)#PKCS#5_and_PKCS#7)
+Nếu độ dài bản rõ không đủ nó sẽ tự động padding thêm sao cho độ dài đầu vào là bội số của 16. Mặc định padding sẽ dùng [PKCS#7](<https://en.wikipedia.org/wiki/Padding_(cryptography)#PKCS#5_and_PKCS#7>)
 
 ![image](https://lilthawg29.files.wordpress.com/2021/03/image-6.png)
 
-Giả sử len(P) = x, ta đặt y = (x // 16 + 1) * 16 là độ dài của P sau khi Padding. Đặt z = y – x (số bytes cần thêm vào cuối). Như vậy ta sẽ thêm vào cuối của P ban đầu z bytes có giá trị z. 
+Giả sử len(P) = x, ta đặt y = (x // 16 + 1) \* 16 là độ dài của P sau khi Padding. Đặt z = y – x (số bytes cần thêm vào cuối). Như vậy ta sẽ thêm vào cuối của P ban đầu z bytes có giá trị z.
 
 Ví dụ: độ dài input là `11` thì sẽ pad thêm `5` bytes `\x05`, còn nếu ộ dài input là `16` vừa tròn thì sẽ pad thêm `16` bytes `\x10` ('10' ở hệ 16 = 16). Nói đơn giản là thiếu 5 bytes thì thêm 5 bytes 5, đủ 16 bytes thì thêm 16 bytes 16 => thiếu x bytes thì thêm x bytes x.
 
-## Sử dụng padding oracle attack khi nào ? 
+## Sử dụng padding oracle attack khi nào ?
 
 Khi ta có một oracle để xác thực bằng cách kiểm tra xem padding liệu có đúng hay không.
 
@@ -33,3 +33,8 @@ Khi ta có một oracle để xác thực bằng cách kiểm tra xem padding li
 
 Phần tấn công ta sẽ đi vào bài làm cụ thể sẽ hiểu rõ hơn.
 
+[Padding Oracle Attack 1](./POA1/)
+
+[Padding Oracle Attack 1](./POA2/)
+
+[Padding Oracle Attack 1](./POA3/)
