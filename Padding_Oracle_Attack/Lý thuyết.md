@@ -35,6 +35,6 @@ Phần tấn công ta sẽ đi vào bài làm cụ thể sẽ hiểu rõ hơn.
 
 [Padding Oracle Attack 1](./POA1/)
 
-[Padding Oracle Attack 1](./POA2/)
+[Padding Oracle Attack 2](./POA2/)
 
-[Padding Oracle Attack 1](./POA3/)
+[Padding Oracle Attack 3](./POA3/)
